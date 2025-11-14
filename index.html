@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chúc mừng ngày Nhà giáo Việt Nam 20/11 💐</title>
+  <style>
+    html,body { height:100%; margin:0; }
+    body {
+      background: radial-gradient(circle at center, #ff80bf 0%, #000 70%);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; overflow:hidden; text-align:center;
+    }
+    .wrap { z-index:2; max-width:900px; padding:20px; }
+    h1 { font-size:2.4rem; margin:0 0 12px; color:#ffd0ea; text-shadow:0 0 18px #ff66cc; }
+    p { font-size:1.1rem; line-height:1.6; color:#ffeaf6; opacity:0; animation:fadeIn 1s 0.8s forwards; }
+    .signature { margin-top:18px; color:#ffb3dd; opacity:0; animation:fadeIn 1s 1.6s forwards; }
+    @keyframes fadeIn { to { opacity:1; } }
+    .heart {
+      position:absolute; width:18px; height:18px; transform:rotate(45deg);
+      background:rgba(255,150,200,0.95);
+    }
+    .heart:before, .heart:after {
+      content:""; position:absolute; width:18px; height:18px; border-radius:50%; background:inherit;
+    }
+    .heart:before { top:-9px; left:0; }
+    .heart:after { left:-9px; top:0; }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/05/08/audio_52b4b5f8b8.mp3?filename=piano-soft-background-144983.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="wrap">
+    <h1>Chúc mừng ngày Nhà giáo Việt Nam 20/11 🌸</h1>
+    <p>
+      Thầy cô kính mến,<br>
+      những bài học thầy cô trao không chỉ là con chữ mà còn là những hạt giống ươm mầm ước mơ.  
+      Chúc thầy cô luôn mạnh khỏe, tràn đầy niềm vui và tiếp tục thắp sáng con đường tri thức cho bao thế hệ học trò. 💖
+    </p>
+    <div class="signature">— Tặng thầy cô kính yêu từ lớp 10A11 💐</div>
+  </div>
+
+  <script>
+    function createHeart(){
+      const h = document.createElement('div');
+      h.className = 'heart';
+      const size = 10 + Math.random()*30;
+      h.style.width = size+'px';
+      h.style.height = size+'px';
+      h.style.left = Math.random()*100 + 'vw';
+      h.style.top = (100 + Math.random()*20) + 'vh';
+      h.style.opacity = 0.9;
+      document.body.appendChild(h);
+      const dur = 4000 + Math.random()*4000;
+      h.animate([
+        { transform: 'translateY(0) rotate(45deg)', opacity:1 },
+        { transform: 'translateY(-120vh) rotate(45deg)', opacity:0 }
+      ], { duration: dur, easing:'linear' });
+      setTimeout(()=>h.remove(), dur);
+    }
+    setInterval(createHeart, 250);
+  </script>
+</body>
+</html>
