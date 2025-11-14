@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chúc mừng ngày Nhà giáo Việt Nam 20/11 💐</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #ff80bf 0%, #000000 70%);
+      height: 100vh;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffb6e6;
+      text-shadow: 0 0 15px #ff66cc;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      line-height: 1.6;
+      animation: fadeIn 4s ease-in-out 1s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .signature {
+      position: absolute;
+      bottom: 30px;
+      font-size: 1em;
+      color: #ff9edb;
+      text-shadow: 0 0 10px #ff66cc;
+      animation: fadeIn 3s ease-in-out 2s forwards;
+      opacity: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: floatUp 6s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -7.5px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -7.5px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-700px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/05/08/audio_52b4b5f8b8.mp3?filename=piano-soft-background-144983.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>Chúc mừng ngày Nhà giáo Việt Nam 20/11 🌸</h1>
+  <p>
+    Thầy cô kính mến,  
+    chúng em biết rằng những bài học thầy cô gieo không chỉ là con chữ,  
+    mà còn là những hạt giống của lòng nhân ái và ước mơ.  
+    Nhân ngày 20/11, chúng em xin gửi đến thầy cô lòng biết ơn sâu sắc,  
+    chúc thầy cô luôn mạnh khỏe, hạnh phúc,  
+    và mãi mãi là ngọn hải đăng soi sáng con đường tri thức cho bao thế hệ học trò. 💖
+  </p>
+
+  <div class="signature">— Tặng thầy cô kính yêu từ lớp 10A11 💐</div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+      heart.style.background = `hsl(${Math.random() * 360}, 70%, 70%)`;
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+    setInterval(createHeart, 200);
+  </script>
+</body>
+</html>
